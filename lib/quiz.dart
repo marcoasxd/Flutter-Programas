@@ -14,6 +14,7 @@ main() => runApp(new ProgramaApp());
 class ProgramaApp extends StatelessWidget { 
   void respondendo() {
     perguntasSelecionadas++;
+    print('Resposta enviada!');
   }
 
   // void Function() funcaoRetornaOutraFuncao() {
