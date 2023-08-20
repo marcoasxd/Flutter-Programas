@@ -4,10 +4,7 @@
   * appBar: exemplo de PARÂMETRO NOMEÁVEL, sempre vai receber um COMPONENTE.
   * Text(): exemplo de COMPONENTE.
 */
-
-
 import 'package:flutter/material.dart';
-
 main() => runApp(new ProgramaApp());
 
 @override // método que o 
