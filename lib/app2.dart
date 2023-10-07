@@ -15,7 +15,7 @@ class PerguntaApp2 extends StatelessWidget {
     ];
 
     void responder() {
-      
+      print('Pergunta respondida!');
     }
 
     return MaterialApp(
@@ -27,15 +27,15 @@ class PerguntaApp2 extends StatelessWidget {
           children: [
             Text(perguntas.elementAt(1)),
             ElevatedButton(
-              onPressed: null,
+              onPressed: responder,
               child: Text('Resposta 1')
             ),
             ElevatedButton(
-              onPressed: null,
+              onPressed: responder,
               child: Text('Resposta 2')
             ),
             ElevatedButton(
-              onPressed: null,
+              onPressed: () => print('Resposta 3 selecionada!!!!!!!!'),
               child: Text('Resposta 3')
             )
           ],
