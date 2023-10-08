@@ -7,11 +7,9 @@ void main(List<String> args) {
   runApp(Cod1());
 }
 
-class Cod1 extends StatelessWidget {
+class Cod1State extends State<Cod1> { // Em // eu passo exatamente o nome do componente Stateful que quero controlar o estado
   bool isButtonPressed = false;
-  @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       // Invés de receber um texto, estou retornando o Scaffold para mais opções de personalização.
       home: Scaffold(
@@ -69,5 +67,11 @@ class Cod1 extends StatelessWidget {
         ),
         ),
       );
+  }
+}
+class Cod1 extends StatefulWidget {
+  @override
+  Cod1State createState() {
+    return Cod1State();
   }
 }
