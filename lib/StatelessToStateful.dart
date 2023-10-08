@@ -13,7 +13,6 @@ class _PerguntaAppState extends State<PerguntaApp> {
     setState(() { // Vai ficar monitorando o estado
       _perguntaSelecionada++;
     });
-    print(_perguntaSelecionada);
   }
 
   @override
