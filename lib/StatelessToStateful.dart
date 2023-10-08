@@ -36,9 +36,9 @@ class _PerguntaAppState extends State<PerguntaApp> {
               //Text(perguntas[perguntaSelecionada]), # substituido por: 
               Questao(perguntas[_perguntaSelecionada]), // separei por componentes, ver em questao1.dart
               // Separei os ElevatedButton por um componente. Ver em resposta.dart
-              Resposta('Resposta 1'),
-              Resposta('Resposta 1'),
-              Resposta('Resposta 1'),
+              Resposta('Resposta 1', _responder),
+              Resposta('Resposta 1', _responder),
+              Resposta('Resposta 1', _responder),
             ],
           ),
         ),
