@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import './questao1.dart';
+import './resposta.dart';
 
 void main() => runApp(const PerguntaApp());
 
@@ -34,18 +35,10 @@ class _PerguntaAppState extends State<PerguntaApp> {
             children: [
               //Text(perguntas[perguntaSelecionada]), # substituido por: 
               Questao(perguntas[_perguntaSelecionada]), // separei por componentes, ver em questao1.dart
-              ElevatedButton(
-                onPressed: _responder,
-                child: const Text('Resposta 1'),
-              ),
-              ElevatedButton(
-                onPressed: _responder,
-                child: const Text('Resposta 2'),
-              ),
-              ElevatedButton(
-                onPressed: _responder,
-                child: const Text('Resposta 3'),
-              ),
+              // Separei os ElevatedButton por um componente. Ver em resposta.dart
+              Resposta('Resposta 1'),
+              Resposta('Resposta 1'),
+              Resposta('Resposta 1'),
             ],
           ),
         ),
