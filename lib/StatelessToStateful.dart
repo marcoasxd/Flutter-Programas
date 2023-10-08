@@ -17,9 +17,20 @@ class _PerguntaAppState extends State<PerguntaApp> {
 
   @override
   Widget build(BuildContext context) {
-    final perguntas = [
-      'Qual é a sua cor favorita?',
-      'Qual é o seu animal favorito?',
+    // Não preciso de deixar "final List <Map<String, Object>> perguntas", posso simplesmente deixar como "final perguntas"
+    final List <Map<String, Object>> perguntas = [ // Isso eh uma lista de Map agora, antes tinha só as perguntas. Map é uma lista Chave (pergunta), Valor (resposta)
+      {
+        'Texto': 'Qual é a sua cor favorita?',
+        'Resposta': ['Preto', 'Vermelho', 'Azul', 'Outras']
+      },
+      {
+        'Texto': 'Qual é o seu animal favorito?',
+        'Resposta': ['Cachorro', 'Jacaré', 'Camaleão', 'Jabuti']
+      },
+      {
+        'Texto': 'Qual é a sua estação do ano favorita?',
+        'Resposta': ['Verão', 'Primavera', 'Inverno', 'Outono']
+      }
     ];
 
     return MaterialApp(
@@ -33,7 +44,7 @@ class _PerguntaAppState extends State<PerguntaApp> {
           child: Column(
             children: [
               //Text(perguntas[perguntaSelecionada]), # substituido por: 
-              Questao(perguntas[_perguntaSelecionada]), // separei por componentes, ver em questao1.dart
+              Questao(perguntas[_perguntaSelecionada]['texto'].toString()), // separei por componentes, ver em questao1.dart
               // Separei os ElevatedButton por um componente. Ver em resposta.dart
               Resposta('Resposta 1', _responder),
               Resposta('Resposta 1', _responder),
